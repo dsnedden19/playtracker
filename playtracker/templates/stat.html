@@ -4,22 +4,25 @@
     <h2>{{ play }} ({{ category }})</h2>
 
     <form method="POST">
-        {% for c in counters %}
-            {% set color = (loop.index0 % 5) + 1 %}
-            <button class="button stat-{{ color }}"
-                    type="submit"
-                    name="counter"
-                    value="{{ c }}">
-                {{ c }} ({{ values[c] }})
-            </button>
-        {% endfor %}
+        <div class="button-grid">
+            {% for c in counters %}
+                {% set color = (loop.index0 % 5) + 1 %}
+                <button class="button stat-{{ color }}"
+                        type="submit"
+                        name="counter"
+                        value="{{ c }}">
+                    {{ c }} ({{ values[c] }})
+                </button>
+            {% endfor %}
+
+            <a href="/category" class="button" style="background-color: gray;">
+                Back to Categories
+            </a>
+
+            <a href="/summary" class="button" style="background-color: black;">
+                View Summary
+            </a>
+        </div>
     </form>
-
-    <a href="/category" class="button" style="background-color: gray;">
-        Back to Categories
-    </a>
-
-    <a href="/summary" class="button" style="background-color: black;">
-        View Summary
-    </a>
 </div>
+
