@@ -34,14 +34,14 @@ plays_by_category = {
 def stat(cat, play):
     # Choose counters based on category
     offense_counters = [
-        "Ran","LUM","LUA","UnCon LUM","UnCon LUA",
+        "LUM","LUA","UnCon LUM","UnCon LUA",
         "MidM","MidA","3ptM","3ptA","O Reb","2nd Chance",
-        "D Foul","FTM","FTA","O Foul","Turnover"
+        "D Foul","FTM","FTA","O Foul","Turnover", "Ran"
     ]
 
     defense_counters = [
-        "Ran","Off Reb","2nd Chance","D Reb","D Foul",
-        "FTM","FTA","O Foul","Tip","Turnover","Clost Out"
+        "Off Reb","2nd Chance","D Reb","D Foul",
+        "FTM","FTA","O Foul","Tip","Turnover","Clost Out", "Ran"
     ]
 
     counters = defense_counters if cat == "Defense" else offense_counters
